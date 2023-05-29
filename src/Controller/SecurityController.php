@@ -27,4 +27,9 @@ class SecurityController extends AbstractController
                'Location' => $iriConverter->getIriFromResource($user),
             ]);
     }
+
+    #[Route('/logout', name: 'app_logout')]
+    public function logout(): void{
+
+    }
 }
