@@ -27,6 +27,8 @@ class ApiTokenHandler implements AccessTokenHandlerInterface
             throw new BadCredentialsException('Token expired');
         }
 
+        $token->getOwnedBy()->markAsTokenAuthenticated($token->getScopes());
+
         return new UserBadge(
             userIdentifier: $token->getOwnedBy()->getUserIdentifier(),
         );
