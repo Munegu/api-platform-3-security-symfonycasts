@@ -4,14 +4,10 @@ namespace App\Tests\Functional;
 
 use App\Factory\DragonTreasureFactory;
 use App\Factory\UserFactory;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Zenstruck\Browser\Json;
-use Zenstruck\Browser\Test\HasBrowser;
 use Zenstruck\Foundry\Test\ResetDatabase;
 
-class DragonTreasureResourceTest extends KernelTestCase
+class DragonTreasureResourceTest extends ApiTestCase
 {
-    use HasBrowser;
     use ResetDatabase;
 
     public function testGetCollectionOfTreasures(): void
