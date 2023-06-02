@@ -131,7 +131,7 @@ class DragonTreasure
 
     #[ORM\ManyToOne(inversedBy: 'dragonTreasures')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['treasure:read', 'treasure:write'])]
+    #[Groups(['admin:read', 'admin:write', 'owner:read'])]
     #[Assert\Valid]
     #[ApiFilter(SearchFilter::class, strategy: 'exact')]
     private ?User $owner = null;
