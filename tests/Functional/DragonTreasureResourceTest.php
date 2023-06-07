@@ -165,6 +165,7 @@ class DragonTreasureResourceTest extends ApiTestCase
             ->assertStatus(200)
             ->assertJsonMatches('value', 12345)
             ->assertJsonMatches('isPublished', false)
+            ->assertJsonMatches('isMine', true)
         ;
     }
 }
